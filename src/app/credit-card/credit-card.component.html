@@ -6,7 +6,7 @@
             <img *ngIf="isMasterCard" src="./assets/mastercard-icon.svg" alt="mastercard icon">
         </div>
     </div>
-    <div class="card-number">{{number}}</div>
+    <div class="card-number">{{number | formatCardNumber}}</div>
     <div class="cash-date-panel">
         <span class="cash">{{amount}}</span>
         <span class="date">{{expirationDate}}</span>

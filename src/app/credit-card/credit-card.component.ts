@@ -10,7 +10,7 @@ export class CreditCardComponent implements OnInit {
   @Input()
   cardName = "Card name";
   @Input()
-  number = "0000 0000 0000 0000"
+  number = "0000000000000000"
   @Input()
   amount = "0000,00";
   @Input()
@@ -27,14 +27,5 @@ export class CreditCardComponent implements OnInit {
   ngOnInit(): void {
     this.isVisa = this.paymentSystem === "visa";
     this.isMasterCard = this.paymentSystem === "mastercard" || this.paymentSystem === "masterCard";
-    this.makeSpacesInNumber();
-  }
-
-  private makeSpacesInNumber(): void {
-    this.number = `
-      ${this.number.slice(0, 4)} 
-      ${this.number.slice(4, 8)} 
-      ${this.number.slice(8, 12)} 
-      ${this.number.slice(12, 16)}`;
   }
 }

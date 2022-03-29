@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreditCardComponent } from './credit-card/credit-card.component';
 import { MyDirDirective } from './my-dir.directive';
+import { FormatCardNumberPipe } from './credit-card/format-card-number.pipe';
+import { FormatNumberPipe } from './format-number.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreditCardComponent,
-    MyDirDirective
+    MyDirDirective,
+    FormatCardNumberPipe,
+    FormatNumberPipe
   ],
   imports: [
     BrowserModule,
